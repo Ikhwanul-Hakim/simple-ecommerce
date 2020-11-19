@@ -3,6 +3,7 @@ const { Router } = require('express')
 const route = Router()
 const categoryController = require('../controller/category')
 const productController = require('../controller/product')
+const specificationController = require('../controller/specification')
 
 route.get('/product', productController.getAll)
 route.get('/product/:id', productController.getById)
@@ -15,5 +16,8 @@ route.get('/category/:id/product', categoryController.getProduct)
 route.post('/category', categoryController.insert)
 route.patch('/category/:id', categoryController.update)
 route.delete('/category/:id', categoryController.delete)
+
+route.patch('/specification/:id', specificationController.update)
+route.delete('/specification/:id', specificationController.delete)
 
 module.exports = route
