@@ -38,7 +38,7 @@ module.exports.getProduct = (req, res) => {
                     )
                     console.log(err2.message);
                     } else {                                
-            console.log('RESULT : ', result2);
+            console.log('RESULT2 : ', result2);
             res.send(
                 responseBuilder(1, null, {...result[0], products: result2})
             )
